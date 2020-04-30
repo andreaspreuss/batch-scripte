@@ -1,7 +1,7 @@
 @echo off 
 SETLOCAL 
-title Batch Datei zum entfernen von System Volume Information Ordnern auf USB Laufwerken
-:: author: Andreas Preuß, Flensburg, den 26.04.2020, andreas@apreuss.de
+title Batch Datei zum entfernen von System Volume Information Ordnern auf Wechseldatentraegern.
+:: author: Andreas Preuß, Flensburg, den 26.04.2020
 COLOR 9F
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
@@ -37,7 +37,7 @@ echo.
 for /l %%i in (1,1,3) do echo. 
 echo                     Folgende Wechseldatentraeger befinden sich auf Deinem Computer: 
 echo.
-@ping -n 2 localhost> nul
+@ping -n 1 localhost> nul
 for /f %%L in ('wmic logicaldisk where drivetype^=2 get deviceid ^|findstr ":" ^|findstr /v /r "^^$"') do echo                     USB - Laufwerk: %%L erkannt.
 @ping -n 5 localhost> nul
 cls
@@ -92,16 +92,15 @@ echo                   Zum Beenden beliebige Taste druecken.
 Pause >nul
 exit
 
-
+:: History... Spielereien mit der Registry ungeprüft!
 :: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore]
 :: "DisableSR"=dword:00000001
-:: If it does not exit, create it by right clicking the right pane, select New > Key and make the key a DWORD Value.
-:: change the value to 1 
 :: services.msc
-:: while you are in services.msc disabling "Windows Search" you also need to disable "Storage Service", by using the exact same sequence of steps.
-:: reg add /?
+:: disabling "Windows Search" -> "Storage Service" 
+::
 :: net stop srservice
 :: sc config srservice start= disabled
-::                                      REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v DisableRemovableDriveIndexing /t REG_DWORD /d 1 /f
+:: reg add /? 
+:: REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v DisableRemovableDriveIndexing /t REG_DWORD /d 1 /f
 :: if %username% == username %systemroot%\system32\reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows" /v DisableRemovableDriveIndexing /t REG_DWORD /d 1 /f
 :: if %username% == username %systemroot%\system32\reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore" /v DisableSR /t REG_DWORD /d 1 /f
