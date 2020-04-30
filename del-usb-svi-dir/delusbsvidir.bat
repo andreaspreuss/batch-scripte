@@ -1,7 +1,7 @@
 @echo off 
 SETLOCAL 
-title Batch Datei zum entfernen von System Volume Information Ordnern auf Wechseldatentraegern.
-:: author: Andreas Preuß, Flensburg, den 26.04.2020
+title Batch Datei zum entfernen des System Volume Information Ordners auf Wechseldatentraegern.
+:: author: Andreas Preuß, Flensburg, den 26.04.2020, mail:andreas (at) apreuss.de 
 COLOR 9F
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
