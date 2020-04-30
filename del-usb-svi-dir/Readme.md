@@ -8,5 +8,5 @@ Daher ist es dann nicht mehr möglich, effektiv Daten auszutauschen.
 
 Dies betrifft teilweise Kameras, smarthome Geräte und medizinische Apparate.
 
-Mit dieser Batch Datei habe ich mal versucht eine tempöräre Lösung zu finden, den
-ungeliebten Ordner jeweils zu entfernen.
+Mit dieser Batch Datei habe ich einmal kurzfristig versucht eine temporäre 
+Lösung zu finden, den ungeliebten Ordner jeweils zu entfernen.
