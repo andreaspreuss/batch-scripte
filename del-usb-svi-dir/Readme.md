@@ -4,9 +4,10 @@ Windows schreibt auf USB Wechseldatenträger den versteckten Ordner **System Vol
 
 Oft können einige externe Geräte diesen versteckten Systemordner nicht verarbeiten und
 wollen den Datenträger stattdessen neu formatieren.
-Daher ist es dann nicht mehr möglich, effektiv Daten auszutauschen.
+
+Somit ist es durch die Willkür von Microsoft nicht mehr möglich, effektiv Daten auszutauschen.
 
 Dies betrifft teilweise Kameras, smarthome Geräte und medizinische Apparate.
 
-Mit dieser Batch Datei habe ich einmal kurzfristig versucht eine temporäre 
+Mit dieser Batch Datei habe ich einmal kurzfristig versucht, eine temporäre 
 Lösung zu finden, den ungeliebten Ordner jeweils zu entfernen.
