@@ -7,7 +7,8 @@ wollen den Datenträger stattdessen neu formatieren.
 
 Somit ist es durch die Willkür von Microsoft nicht mehr möglich, effektiv Daten auszutauschen.
 
-Dies betrifft teilweise Kameras, smarthome Geräte und medizinische Apparate.
+Dies betrifft teilweise Kameras, smarthome Geräte und medizinische Apparate, wie z.B. einige 
+Schlafabnoe Pumpen usw.
 
 Mit dieser Batch Datei habe ich einmal kurzfristig versucht, eine temporäre 
 Lösung zu finden, den ungeliebten Ordner jeweils zu entfernen.
